@@ -14,5 +14,5 @@ int matrizGetValue(matriz *m,int i,int j,unsigned char *n);
 int size (matriz *m);
 unsigned char pontos (matriz *m, int i, int j);
 
-void print_matriz (matriz *img);
+
 

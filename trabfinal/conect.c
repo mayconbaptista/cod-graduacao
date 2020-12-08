@@ -65,15 +65,15 @@ matriz* matrizconexa (matriz *img)
             {
                 for(int col = 0; col < colunas(img); col++)
                 {
+                    rotulo++;
                     matrizGetValue(img, lin, col, &aux);
                     matrizGetValue(img_res, lin, col, &aux2);
-                    if(aux == '1' && aux2 == 0)// não rotulado
+                    if(aux == '1' || aux == 1 && aux2 == '0' || aux2 == 0)// não rotulado
                     {
                         enqueue(fi, lin, col, '1');
                         rotula_adjacentes(fi, img);
                     }
-                    if(size(img) > 0)
-                        rotulo++;
+
                     while (empty_queue(fi) != SUCESS )
                     {
                         // pega todos o pixel adjacentes listados e coloca na imagem 2;

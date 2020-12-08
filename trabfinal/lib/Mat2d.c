@@ -73,19 +73,3 @@ unsigned char pontos (matriz *m, int i, int j)
   }
 }
 
-void print_matriz (matriz *img)
-{
-  if(img != NULL)
-    {
-      for (int i = 0; i < img->row; i++)
-      {
-        for (int j = 0; j < img->col ; j++)
-        {
-          printf("%3d ",img->data[i]);
-        }
-        printf("\n");
-      }
-
-    }
-  return;
-}

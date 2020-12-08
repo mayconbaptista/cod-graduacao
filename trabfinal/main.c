@@ -5,34 +5,28 @@
 #include "./lib/Mat2d.h"
 #include "conect.h"
 
-matriz* readbin (char end[])
-{
-    FILE *arg = fopen(end, "rb");
-    if(arg == NULL)
-        return NULL;
-    else
-    {
-        int lin, col;
-        fread(&lin, sizeof(int), 1, arg);
-        fread(&col, sizeof(int), 1, arg);
-        matriz *Img = allocMatriz (lin, col);
-        if(Img == NULL)
-            return NULL;
-        else
-        {
-			int resultado;
-            unsigned char let;
-            for(int i=0; i < linhas(Img); i++)
-            {
-                for(int j=0; j < colunas(Img); j++)
-                {
-                    fread(&let, sizeof(unsigned char), 1, arg);
-                }
-            }
-        }
-		fclose(arg);
-        return Img;
-    }
+matriz *readImm(char *s){
+	FILE *f = fopen(s,"rb");
+	if(f==NULL)return NULL;
+	
+	int lin,col;
+	fread(&lin,sizeof(int),1,f);
+	fread(&col,sizeof(int),1,f);
+	
+	matriz *m = allocMatriz(lin,col);
+	if(m==NULL)return m;
+	
+	unsigned char c;
+	for(int i=0;i<lin;i++){
+		for(int j=0;j<col;j++){
+			fread(&c,sizeof(unsigned char),1,f);
+			int t = matrizSetValue(m,i,j,c);
+			if(t<0)return NULL;
+		}
+	}
+	
+	fclose(f);
+	return m;
 }
 
 
@@ -153,7 +147,7 @@ int main(int argc, char *argv[]){
 				freeMatriz(m);
 			}
 			else if(strstr(argv[2],".imm")!=NULL){
-				matriz *m = readbin (argv[2]);
+				matriz *m = readImm (argv[2]);
 				if(m == NULL)
 				{
 					printf("ERROR, não foi possivel ler %s\n",argv[2]);
@@ -209,7 +203,7 @@ int main(int argc, char *argv[]){
 				m = readTxt(argv[3]);
 			}
 			else if(strstr(argv[3],".imm")!=NULL){
-				m = readbin (argv[3]);
+				m = readImm (argv[3]);
 			}
 			int thr = atoi(argv[2]);
 			m = segment(thr, m);
@@ -220,7 +214,7 @@ int main(int argc, char *argv[]){
 	else if(strcmp(argv[1],"-cc")==0){
 		if(strstr(argv[2], ".imm") != NULL)
 		{
-			matriz *img = readbin(argv[2]);
+			matriz *img = readImm (argv[2]);
 			if(strcmp(argv[3],"outfile") == 0)
 			{
 				if(img != NULL)
