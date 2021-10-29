@@ -1,0 +1,48 @@
+tribulaçao
+adjetivo
+Que se enganou
+&
+sutil
+adjetivo
+Característica de fino, delgado: um sutil tecido indiano
+&
+mitigar
+verbo pronomial
+Fazer com que fique mais brando
+&
+explicito
+adjetivo
+Que é expresso sem dúvidas nem ambiguidades
+&
+eximio
+adjetivo
+Que revela perfeição em tudo o que faz
+&
+equivocado
+adjetivo
+Que foi alvo de equívoco; que confundiu uma coisa por outra
+&
+elegivel
+adjetivo
+Que pode ser alvo de eleição
+&
+discrição
+subs feminino
+Qualidade de discreto, de quem não quer chamar a atenção
+&
+desfecho
+subs masculino
+Resolução para um problema, para um momento difícil
+&
+desdenhar
+verbo
+demostrar falta de consideração
+&
+critério
+subs masculino
+Capacidade para distinguir o verdadeiro do falso, o bom do ruim
+&
+contingente
+adjetivo
+Que pode ou não ocorrer; incerto, duvidoso
+!

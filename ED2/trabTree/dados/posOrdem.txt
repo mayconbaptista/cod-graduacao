@@ -1,0 +1,49 @@
+contingente
+adjetivo
+Que pode ou não ocorrer; incerto, duvidoso
+&
+critério
+subs masculino
+Capacidade para distinguir o verdadeiro do falso, o bom do ruim
+&
+desdenhar
+verbo
+demostrar falta de consideração
+&
+desfecho
+subs masculino
+Resolução para um problema, para um momento difícil
+&
+elegivel
+adjetivo
+Que pode ser alvo de eleição
+&
+equivocado
+adjetivo
+Que foi alvo de equívoco; que confundiu uma coisa por outra
+&
+eximio
+adjetivo
+Que revela perfeição em tudo o que faz
+&
+explicito
+adjetivo
+Que é expresso sem dúvidas nem ambiguidades
+&
+mitigar
+verbo pronomial
+Fazer com que fique mais brando
+&
+sutil
+adjetivo
+Característica de fino, delgado: um sutil tecido indiano
+&
+tribulaçao
+adjetivo
+Que se enganou
+&
+discrição
+subs feminino
+Qualidade de discreto, de quem não quer chamar a atenção
+&
+FIM
